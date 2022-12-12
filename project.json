@@ -3,10 +3,12 @@
   "description": "",
   "main": "Main.xaml",
   "dependencies": {
+    "GASTranslate.Activities": "[1.0.1]",
     "UiPath.Excel.Activities": "[2.11.4]",
     "UiPath.Mail.Activities": "[1.18.2]",
     "UiPath.System.Activities": "[21.10.5]",
-    "UiPath.UIAutomation.Activities": "[21.10.6]"
+    "UiPath.UIAutomation.Activities": "[21.10.6]",
+    "Zell.CognitiveServices.Activities": "[1.1.20]"
   },
   "webServices": [],
   "entitiesStores": [],
