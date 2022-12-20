@@ -3,12 +3,15 @@
   "description": "",
   "main": "Main.xaml",
   "dependencies": {
+    "GASTranslate.Activities": "[1.0.1]",
     "UiPath.DocumentUnderstanding.ML.Activities": "[1.18.0]",
     "UiPath.Excel.Activities": "[2.11.4]",
     "UiPath.IntelligentOCR.Activities": "[6.6.0]",
-    "UiPath.Mail.Activities": "[1.12.3]",
+    "UiPath.Mail.Activities": "[1.18.2]",
     "UiPath.System.Activities": "[21.10.5]",
-    "UiPath.UIAutomation.Activities": "[21.10.6]"
+    "UiPath.UIAutomation.Activities": "[21.10.6]",
+    "UiPathTeam.InteractiveFormLauncher.Activities": "[0.0.7291.27657]",
+    "Zell.CognitiveServices.Activities": "[1.1.20]"
   },
   "webServices": [],
   "entitiesStores": [],
