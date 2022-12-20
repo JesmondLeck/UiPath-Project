@@ -16,7 +16,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1153.33333333333,700.666666666667</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1153.33333333333,886</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="50">
@@ -111,7 +111,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap:VirtualizedContainerService.HintSize="634,821.333333333333" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap:VirtualizedContainerService.HintSize="634,1043.33333333333" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Default="No" Name="emailDetailCheck" />
       <Variable x:TypeArguments="x:String" Name="optionForCc" />
@@ -121,22 +121,22 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <av:Point x:Key="ShapeLocation">240,2.66666666666666</av:Point>
         <av:Size x:Key="ShapeSize">60,74.6666666666667</av:Size>
-        <av:PointCollection x:Key="ConnectorLocation">270,77.3333333333333 270,106</av:PointCollection>
-        <x:Double x:Key="Height">785.12373467960481</x:Double>
+        <av:PointCollection x:Key="ConnectorLocation">270,77.3333333333333 270,136</av:PointCollection>
+        <x:Double x:Key="Height">1007.3333333333333</x:Double>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID3</x:Reference>
+      <x:Reference>__ReferenceID4</x:Reference>
     </Flowchart.StartNode>
     <FlowStep x:Name="__ReferenceID3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">170,106</av:Point>
-          <av:Size x:Key="ShapeSize">200,128</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">270,234 270,292</av:PointCollection>
+          <av:Point x:Key="ShapeLocation">170,344.333333333333</av:Point>
+          <av:Size x:Key="ShapeSize">200,131.333333333333</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">270,475.666666666667 270,551</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InterruptibleWhile sap2010:Annotation.AnnotationText="Prompt User to choose file for attachment and enter necessary information about the email." DisplayName="While" sap:VirtualizedContainerService.HintSize="200,128" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_11">
+      <ui:InterruptibleWhile sap2010:Annotation.AnnotationText="Prompt User to choose file for attachment and enter necessary information about the email." Condition="[emailDetailCheck=&quot;No&quot;]" DisplayName="While" sap:VirtualizedContainerService.HintSize="200,131.333333333333" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_11">
         <ui:InterruptibleWhile.Body>
           <Sequence sap:VirtualizedContainerService.HintSize="876,3631.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_46">
             <sap:WorkflowViewStateService.ViewState>
@@ -265,9 +265,6 @@
             <ui:MessageBox AutoCloseAfter="00:00:00" Buttons="YesNo" Caption="Email Details" ChosenButton="[emailDetailCheck]" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="834,84.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_12" Text="[&quot;Please check the details of you email:&quot;+Environment.NewLine+&quot;Email Type: &quot;+emailType+Environment.NewLine+&quot;Receiver's Email Address: &quot;+emailAddress+Environment.NewLine+&quot;Email Cc: &quot;+ccEmailAddress+Environment.NewLine+&quot;Email Subject: &quot;+emailSubject+Environment.NewLine+&quot;Email Content: &quot;+emailContent+Environment.NewLine+&quot;Email Translate: &quot;+emailTranslate]" />
           </Sequence>
         </ui:InterruptibleWhile.Body>
-        <ui:InterruptibleWhile.Condition>
-          <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="emailDetailCheck=&quot;No&quot;" />
-        </ui:InterruptibleWhile.Condition>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -279,12 +276,12 @@
         <FlowStep x:Name="__ReferenceID0">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">170,292</av:Point>
-              <av:Size x:Key="ShapeSize">200,96</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">270,388 270,452</av:PointCollection>
+              <av:Point x:Key="ShapeLocation">170,551</av:Point>
+              <av:Size x:Key="ShapeSize">200,98</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">270,649 270,711</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <If sap2010:Annotation.AnnotationText="Send email based on the type they choose. (Gmail)" Condition="[emailType = &quot;Gmail&quot;]" sap:VirtualizedContainerService.HintSize="200,96" sap2010:WorkflowViewState.IdRef="If_6">
+          <If sap2010:Annotation.AnnotationText="Send email based on the type they choose. (Gmail)" Condition="[emailType = &quot;Gmail&quot;]" sap:VirtualizedContainerService.HintSize="200,98" sap2010:WorkflowViewState.IdRef="If_6">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -357,12 +354,12 @@
             <FlowStep x:Name="__ReferenceID1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">170,452</av:Point>
-                  <av:Size x:Key="ShapeSize">200,96</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">270,548 270,598</av:PointCollection>
+                  <av:Point x:Key="ShapeLocation">170,711</av:Point>
+                  <av:Size x:Key="ShapeSize">200,98</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">270,809 270,852.666666666667</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:IfElseIf sap2010:Annotation.AnnotationText="Send email based on the type they choose. (Outlook)" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="200,96" sap2010:WorkflowViewState.IdRef="IfElseIf_4">
+              <ui:IfElseIf sap2010:Annotation.AnnotationText="Send email based on the type they choose. (Outlook)" DisplayName="Else If" sap:VirtualizedContainerService.HintSize="200,98" sap2010:WorkflowViewState.IdRef="IfElseIf_4">
                 <ui:IfElseIf.ConditionBlocks>
                   <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                     <ui:IfElseIfBlock BlockType="If" Condition="[emailType = &quot;Outlook&quot;]">
@@ -439,11 +436,11 @@
                 <FlowStep x:Name="__ReferenceID2">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">170,598</av:Point>
-                      <av:Size x:Key="ShapeSize">200,112</av:Size>
+                      <av:Point x:Key="ShapeLocation">170,852.666666666667</av:Point>
+                      <av:Size x:Key="ShapeSize">200,114.666666666667</av:Size>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="A confirmation message to let user know that the email is sent out." AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="200,112" sap2010:WorkflowViewState.IdRef="MessageBox_13" Text="[&quot;Email is successfully sent.&quot;]">
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" sap2010:Annotation.AnnotationText="A confirmation message to let user know that the email is sent out." AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="200,114.666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_13" Text="[&quot;Email is successfully sent.&quot;]">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -461,5 +458,25 @@
     <x:Reference>__ReferenceID0</x:Reference>
     <x:Reference>__ReferenceID1</x:Reference>
     <x:Reference>__ReferenceID2</x:Reference>
+    <FlowStep x:Name="__ReferenceID4">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">170,136</av:Point>
+          <av:Size x:Key="ShapeSize">200,148</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">270,284 270,344.333333333333</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Sequence sap2010:Annotation.AnnotationText="Retrieve necessary information from invoices in PDF format and convert into Excel file." DisplayName="Document Understanding" sap:VirtualizedContainerService.HintSize="200,148" sap2010:WorkflowViewState.IdRef="Sequence_56">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Sequence>
+      <FlowStep.Next>
+        <x:Reference>__ReferenceID3</x:Reference>
+      </FlowStep.Next>
+    </FlowStep>
   </Flowchart>
 </Activity>
