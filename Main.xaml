@@ -1,6 +1,17 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1153.33333333333,700.666666666667" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:zc="clr-namespace:Zell.CognitiveServices;assembly=Zell.CognitiveServices.Activities">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:zc="clr-namespace:Zell.CognitiveServices;assembly=Zell.CognitiveServices.Activities">
+  <x:Members>
+    <x:Property Name="excelAttach" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:Main.excelAttach>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Main.excelAttach>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1153.33333333333,700.666666666667</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="46">
+    <scg:List x:TypeArguments="x:String" Capacity="98">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -47,10 +58,14 @@
       <x:String>System.Text.RegularExpressions</x:String>
       <x:String>System.Web</x:String>
       <x:String>UiPath.Excel</x:String>
+      <x:String>UiPathTeam.InteractiveFormLauncher</x:String>
+      <x:String>UiPathTeam.InteractiveFormLauncher.Activities</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="27">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="36">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -78,6 +93,15 @@
       <AssemblyReference>GASTranslate.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPathTeam.InteractiveFormLauncher</AssemblyReference>
+      <AssemblyReference>UiPathTeam.InteractiveFormLauncher.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart sap:VirtualizedContainerService.HintSize="634,636" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -96,199 +120,159 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">200,127.166666666667</av:Point>
-          <av:Size x:Key="ShapeSize">200,68</av:Size>
+          <av:Size x:Key="ShapeSize">200,69.3333333333333</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence sap:VirtualizedContainerService.HintSize="1243.33333333333,5978" sap2010:WorkflowViewState.IdRef="Sequence_1">
+      <Sequence sap:VirtualizedContainerService.HintSize="1243.33333333333,5228.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
         <Sequence.Variables>
           <Variable x:TypeArguments="x:String" Name="emailType" />
           <Variable x:TypeArguments="x:String" Name="emailAddress" />
           <Variable x:TypeArguments="x:String" Name="emailContent" />
           <Variable x:TypeArguments="x:String" Name="emailTranslate" />
           <Variable x:TypeArguments="x:String" Name="emailTranslatedContent" />
-          <Variable x:TypeArguments="x:String" Name="emailTypeConfirm">
-            <Variable.Default>
-              <Literal x:TypeArguments="x:String">No</Literal>
-            </Variable.Default>
-          </Variable>
-          <Variable x:TypeArguments="x:String" Name="emailAddressConfirm">
-            <Variable.Default>
-              <Literal x:TypeArguments="x:String">No</Literal>
-            </Variable.Default>
-          </Variable>
-          <Variable x:TypeArguments="x:String" Name="emailContentConfirm">
-            <Variable.Default>
-              <Literal x:TypeArguments="x:String">No</Literal>
-            </Variable.Default>
-          </Variable>
-          <Variable x:TypeArguments="x:String" Name="emailTranslateConfirm">
-            <Variable.Default>
-              <Literal x:TypeArguments="x:String">No</Literal>
-            </Variable.Default>
-          </Variable>
           <Variable x:TypeArguments="x:String" Name="emailSubject" />
-          <Variable x:TypeArguments="x:String" Name="emailSubjectConfirm">
-            <Variable.Default>
-              <Literal x:TypeArguments="x:String">No</Literal>
-            </Variable.Default>
-          </Variable>
-          <Variable x:TypeArguments="x:String" Name="ccEmailAddressConfirm">
-            <Variable.Default>
-              <Literal x:TypeArguments="x:String">No</Literal>
-            </Variable.Default>
-          </Variable>
           <Variable x:TypeArguments="x:String" Name="ccEmailAddress" />
-          <Variable x:TypeArguments="s:String[]" Name="ccEmailAddressArray" />
-          <Variable x:TypeArguments="s:String[]" Name="ttt" />
+          <Variable x:TypeArguments="x:String" Name="optionForCc" />
+          <Variable x:TypeArguments="x:String" Default="No" Name="emailDetailCheck" />
+          <Variable x:TypeArguments="x:String" Name="excelAttach" />
+          <Variable x:TypeArguments="x:String" Name="ccEmailCheck" />
         </Sequence.Variables>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="1201.33333333333,680.666666666667" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_6">
+        <ui:InterruptibleWhile Condition="[emailDetailCheck=&quot;No&quot;]" DisplayName="While" sap:VirtualizedContainerService.HintSize="1201.33333333333,3799.33333333333" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_9">
           <ui:InterruptibleWhile.Body>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,512.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_24">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="876,3631.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_32">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:InputDialog Options="{x:Null}" DisplayName="Ask user for Email Type" sap:VirtualizedContainerService.HintSize="334,296" sap2010:WorkflowViewState.IdRef="InputDialog_7" IsPassword="False" Label="Please choose an Email type" OptionsString="Gmail;Outlook" Title="Email Type">
+              <ui:SelectFile DisplayName="Select File" Filter="Excel|*.xlsx;*.xls;*.xlsm;*.xlsb" sap:VirtualizedContainerService.HintSize="834,138.666666666667" sap2010:WorkflowViewState.IdRef="SelectFile_1" SelectedFile="[excelAttach]" />
+              <ui:InputDialog Options="{x:Null}" DisplayName="Ask user for Email Type" sap:VirtualizedContainerService.HintSize="834,296" sap2010:WorkflowViewState.IdRef="InputDialog_7" IsPassword="False" Label="Please choose an Email type" OptionsString="Gmail;Outlook" Title="Email Type">
                 <ui:InputDialog.Result>
                   <OutArgument x:TypeArguments="x:String">[emailType]</OutArgument>
                 </ui:InputDialog.Result>
               </ui:InputDialog>
-              <ui:MessageBox AutoCloseAfter="00:00:00" Buttons="YesNo" Caption="Confirmation" ChosenButton="[emailTypeConfirm]" DisplayName="Confirmation" sap:VirtualizedContainerService.HintSize="334,84.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[&quot;Confirm?&quot;]" />
-            </Sequence>
-          </ui:InterruptibleWhile.Body>
-          <ui:InterruptibleWhile.Condition>
-            <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="emailTypeConfirm.Equals(&quot;No&quot;)" />
-          </ui:InterruptibleWhile.Condition>
-        </ui:InterruptibleWhile>
-        <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="1201.33333333333,626.666666666667" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_3">
-          <ui:InterruptibleWhile.Body>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,458.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_21">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Ask user for Email Address" sap:VirtualizedContainerService.HintSize="334,242" sap2010:WorkflowViewState.IdRef="InputDialog_4" IsPassword="False" Label="Please provide the receiver's email address" Title="Email Address">
+              <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Ask user for Email Address" sap:VirtualizedContainerService.HintSize="834,242" sap2010:WorkflowViewState.IdRef="InputDialog_4" IsPassword="False" Label="Please provide the receiver's email address" Title="Email Address">
                 <ui:InputDialog.Result>
                   <OutArgument x:TypeArguments="x:String">[emailAddress]</OutArgument>
                 </ui:InputDialog.Result>
               </ui:InputDialog>
-              <ui:MessageBox AutoCloseAfter="00:00:00" Buttons="YesNo" Caption="Confirmation" ChosenButton="[emailAddressConfirm]" DisplayName="Confirmation" sap:VirtualizedContainerService.HintSize="334,84.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Confirm?&quot;]" />
-            </Sequence>
-          </ui:InterruptibleWhile.Body>
-          <ui:InterruptibleWhile.Condition>
-            <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="emailAddressConfirm.Equals(&quot;No&quot;)" />
-          </ui:InterruptibleWhile.Condition>
-        </ui:InterruptibleWhile>
-        <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="1201.33333333333,626.666666666667" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_8">
-          <ui:InterruptibleWhile.Body>
-            <Sequence sap:VirtualizedContainerService.HintSize="376,458.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_29">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap:VirtualizedContainerService.HintSize="334,242" sap2010:WorkflowViewState.IdRef="InputDialog_9" IsPassword="False" Label="Please provide the Email Address (Seperate with comma (,) if you have multiple CCs)" Title="cc">
+              <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="834,296" sap2010:WorkflowViewState.IdRef="InputDialog_10" IsPassword="False" Label="Do you wish to cc somebody in your email?" OptionsString="Yes;No" Title="Email CC">
                 <ui:InputDialog.Result>
-                  <OutArgument x:TypeArguments="x:String">[ccEmailAddress]</OutArgument>
+                  <OutArgument x:TypeArguments="x:String">[optionForCc]</OutArgument>
                 </ui:InputDialog.Result>
               </ui:InputDialog>
-              <ui:MessageBox AutoCloseAfter="00:00:00" Buttons="YesNo" Caption="Confirmation" ChosenButton="[ccEmailAddressConfirm]" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,84.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_10" Text="[&quot;Confirm?&quot;]" />
-            </Sequence>
-          </ui:InterruptibleWhile.Body>
-          <ui:InterruptibleWhile.Condition>
-            <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="ccEmailAddressConfirm.Equals(&quot;No&quot;)" />
-          </ui:InterruptibleWhile.Condition>
-        </ui:InterruptibleWhile>
-        <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="1201.33333333333,626.666666666667" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_7">
-          <ui:InterruptibleWhile.Body>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,458.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_25">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Ask user for Email Subject" sap:VirtualizedContainerService.HintSize="334,242" sap2010:WorkflowViewState.IdRef="InputDialog_8" IsPassword="False" Label="Please type in the Email Subject" Title="Email Subject">
+              <If Condition="[optionForCc=&quot;Yes&quot;]" sap:VirtualizedContainerService.HintSize="834,977.333333333333" sap2010:WorkflowViewState.IdRef="If_4">
+                <If.Then>
+                  <Sequence sap:VirtualizedContainerService.HintSize="526,818" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="ccEmailCheck" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap:VirtualizedContainerService.HintSize="484,242" sap2010:WorkflowViewState.IdRef="InputDialog_9" IsPassword="False" Label="Please provide the Email Address (Seperate with comma (,) if you have multiple CCs)" Title="cc">
+                      <ui:InputDialog.Result>
+                        <OutArgument x:TypeArguments="x:String">[ccEmailAddress]</OutArgument>
+                      </ui:InputDialog.Result>
+                    </ui:InputDialog>
+                    <Assign sap:VirtualizedContainerService.HintSize="484,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_6">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[ccEmailCheck]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[ccEmailAddress]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <If Condition="[emailType=&quot;Outlook&quot;]" sap:VirtualizedContainerService.HintSize="484,342.666666666667" sap2010:WorkflowViewState.IdRef="If_5">
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="304,153.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign sap:VirtualizedContainerService.HintSize="262,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_8">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[ccEmailAddress]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">[ccEmailAddress.Replace(",",";")]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_36">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Assign sap:VirtualizedContainerService.HintSize="262,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_7">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[ccEmailCheck]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">NIL</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </If.Else>
+              </If>
+              <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Ask user for Email Subject" sap:VirtualizedContainerService.HintSize="834,242" sap2010:WorkflowViewState.IdRef="InputDialog_8" IsPassword="False" Label="Please type in the Email Subject" Title="Email Subject">
                 <ui:InputDialog.Result>
                   <OutArgument x:TypeArguments="x:String">[emailSubject]</OutArgument>
                 </ui:InputDialog.Result>
               </ui:InputDialog>
-              <ui:MessageBox AutoCloseAfter="00:00:00" Buttons="YesNo" Caption="Confirmation" ChosenButton="[emailSubjectConfirm]" DisplayName="Confirmation" sap:VirtualizedContainerService.HintSize="334,84.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_8" Text="[&quot;Confirm?&quot;]" />
-            </Sequence>
-          </ui:InterruptibleWhile.Body>
-          <ui:InterruptibleWhile.Condition>
-            <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="emailSubjectConfirm.Equals(&quot;No&quot;)" />
-          </ui:InterruptibleWhile.Condition>
-        </ui:InterruptibleWhile>
-        <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="1201.33333333333,626.666666666667" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_4">
-          <ui:InterruptibleWhile.Body>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,458.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_22">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Ask user for Email Content" sap:VirtualizedContainerService.HintSize="334,242" sap2010:WorkflowViewState.IdRef="InputDialog_5" IsPassword="False" Label="Please insert the content of your email." Title="Content">
+              <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Ask user for Email Content" sap:VirtualizedContainerService.HintSize="834,242" sap2010:WorkflowViewState.IdRef="InputDialog_5" IsPassword="False" Label="Please insert the content of your email." Title="Content">
                 <ui:InputDialog.Result>
                   <OutArgument x:TypeArguments="x:String">[emailContent]</OutArgument>
                 </ui:InputDialog.Result>
               </ui:InputDialog>
-              <ui:MessageBox AutoCloseAfter="00:00:00" Buttons="YesNo" Caption="Confirmation" ChosenButton="[emailContentConfirm]" DisplayName="Confirmation" sap:VirtualizedContainerService.HintSize="334,84.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[&quot;Confirm?&quot;]" />
-            </Sequence>
-          </ui:InterruptibleWhile.Body>
-          <ui:InterruptibleWhile.Condition>
-            <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="emailContentConfirm.Equals(&quot;No&quot;)" />
-          </ui:InterruptibleWhile.Condition>
-        </ui:InterruptibleWhile>
-        <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="1201.33333333333,680.666666666667" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_5">
-          <ui:InterruptibleWhile.Body>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,512.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_23">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <ui:InputDialog Options="{x:Null}" DisplayName="Ask user whether to translate Email" sap:VirtualizedContainerService.HintSize="334,296" sap2010:WorkflowViewState.IdRef="InputDialog_6" IsPassword="False" Label="Do you want to translate the conent?" OptionsString="Yes;No" Title="Translate">
+              <ui:InputDialog Options="{x:Null}" DisplayName="Ask user whether to translate Email" sap:VirtualizedContainerService.HintSize="834,296" sap2010:WorkflowViewState.IdRef="InputDialog_6" IsPassword="False" Label="Do you want to translate the conent into Mandarin?" OptionsString="Yes;No" Title="Translate">
                 <ui:InputDialog.Result>
                   <OutArgument x:TypeArguments="x:String">[emailTranslate]</OutArgument>
                 </ui:InputDialog.Result>
               </ui:InputDialog>
-              <ui:MessageBox AutoCloseAfter="00:00:00" Buttons="YesNo" Caption="Confirmation" ChosenButton="[emailTranslateConfirm]" DisplayName="Confirmation" sap:VirtualizedContainerService.HintSize="334,84.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot;Confirm?&quot;]" />
+              <If Condition="[emailTranslate = &quot;Yes&quot;]" sap:VirtualizedContainerService.HintSize="834,364.666666666667" sap2010:WorkflowViewState.IdRef="If_3">
+                <If.Then>
+                  <Sequence sap:VirtualizedContainerService.HintSize="320.666666666667,205.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <zc:TextTranslator ApiKey="{x:Null}" DetectedSourceLanguage="{x:Null}" DisplayName="Text translator" sap:VirtualizedContainerService.HintSize="278.666666666667,113.333333333333" sap2010:WorkflowViewState.IdRef="TextTranslator_1" TargetLanguageCode="zh-Hans" Text="[emailContent]" TranslatedText="[emailTranslatedContent]" />
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Assign sap:VirtualizedContainerService.HintSize="262,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_3">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[emailTranslatedContent]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[emailContent]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </If.Else>
+              </If>
+              <ui:MessageBox AutoCloseAfter="00:00:00" Buttons="YesNo" Caption="Email Details" ChosenButton="[emailDetailCheck]" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="834,84.6666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_11" Text="[&quot;Please check the details of you email:&quot;+Environment.NewLine+&quot;Email Type: &quot;+emailType+Environment.NewLine+&quot;Receiver's Email Address: &quot;+emailAddress+Environment.NewLine+&quot;Email Cc: &quot;+ccEmailAddress+Environment.NewLine+&quot;Email Subject: &quot;+emailSubject+Environment.NewLine+&quot;Email Content: &quot;+emailContent+Environment.NewLine+&quot;Email Translate: &quot;+emailTranslate]" />
             </Sequence>
           </ui:InterruptibleWhile.Body>
-          <ui:InterruptibleWhile.Condition>
-            <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="emailTranslateConfirm.Equals(&quot;No&quot;)" />
-          </ui:InterruptibleWhile.Condition>
         </ui:InterruptibleWhile>
-        <If Condition="[emailTranslate = &quot;Yes&quot;]" sap:VirtualizedContainerService.HintSize="1201.33333333333,367.333333333333" sap2010:WorkflowViewState.IdRef="If_3">
-          <If.Then>
-            <Sequence sap:VirtualizedContainerService.HintSize="320.666666666667,205.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_11">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <zc:TextTranslator ApiKey="{x:Null}" DetectedSourceLanguage="{x:Null}" DisplayName="Text translator" sap:VirtualizedContainerService.HintSize="278.666666666667,113.333333333333" sap2010:WorkflowViewState.IdRef="TextTranslator_1" TargetLanguageCode="zh-Hans" Text="[emailContent]" TranslatedText="[emailTranslatedContent]" />
-            </Sequence>
-          </If.Then>
-          <If.Else>
-            <Assign sap:VirtualizedContainerService.HintSize="262,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_3">
-              <Assign.To>
-                <OutArgument x:TypeArguments="x:String">[emailTranslatedContent]</OutArgument>
-              </Assign.To>
-              <Assign.Value>
-                <InArgument x:TypeArguments="x:String">[emailContent]</InArgument>
-              </Assign.Value>
-            </Assign>
-          </If.Else>
-        </If>
-        <If Condition="[emailType = &quot;Gmail&quot;]" sap:VirtualizedContainerService.HintSize="1201.33333333333,1246" sap2010:WorkflowViewState.IdRef="If_2">
+        <If Condition="[emailType = &quot;Gmail&quot;]" sap:VirtualizedContainerService.HintSize="1201.33333333333,1172.66666666667" sap2010:WorkflowViewState.IdRef="If_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -296,30 +280,29 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <If.Then>
-            <Sequence sap:VirtualizedContainerService.HintSize="552,755.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_5">
-              <Sequence.Variables>
-                <Variable x:TypeArguments="s:String[]" Name="ccEmailAddressArray" />
-              </Sequence.Variables>
+            <Sequence sap:VirtualizedContainerService.HintSize="552,786" sap2010:WorkflowViewState.IdRef="Sequence_5">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="melvinngweixiang@gmail.com" DisplayName="Use Gmail" EmailAddress="melvinngweixiang@gmail.com" sap:VirtualizedContainerService.HintSize="510,663.333333333333" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_2" Timeout="90" UseConnectionService="False">
+              <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="melvinngweixiang@gmail.com" DisplayName="Use Gmail" EmailAddress="melvinngweixiang@gmail.com" sap:VirtualizedContainerService.HintSize="510,694" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_2" Timeout="90" UseConnectionService="False">
                 <umab:GmailApplicationCard.Body>
                   <ActivityAction x:TypeArguments="um:IMailQuickHandle">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Gmail" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,479.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,510" sap2010:WorkflowViewState.IdRef="Sequence_9">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <umab:SendMailX Bcc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Gmail]" Body="[emailTranslatedContent]" BodyType="Text" Cc="[ccEmailAddress]" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,387.333333333333" sap2010:WorkflowViewState.IdRef="SendMailX_2" Importance="Normal" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="[emailSubject]" To="[emailAddress]" UseDocumentAsBody="False">
+                      <umab:SendMailX Bcc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Gmail]" Body="[emailTranslatedContent]" BodyType="Text" Cc="[ccEmailAddress]" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,418" sap2010:WorkflowViewState.IdRef="SendMailX_2" Importance="Normal" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="[emailSubject]" To="[emailAddress]" UseDocumentAsBody="False">
                         <umab:SendMailX.Files>
-                          <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                          <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                            <InArgument x:TypeArguments="x:String">[excelAttach]</InArgument>
+                          </scg:List>
                         </umab:SendMailX.Files>
                         <umab:SendMailX.HtmlBodyFromFile>
                           <umabh:HtmlContentArgument FilePath="{x:Null}">
@@ -349,18 +332,18 @@
             </Sequence>
           </If.Then>
           <If.Else>
-            <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="603.333333333333,1084" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+            <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="603.333333333333,1010.66666666667" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
               <ui:IfElseIf.ConditionBlocks>
                 <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                   <ui:IfElseIfBlock BlockType="If" Condition="[emailType = &quot;Outlook&quot;]">
                     <ui:IfElseIfBlock.Then>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="552,886" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="552,812.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_18">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <umab:ExchangeApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" SharedMailbox="{x:Null}" Account="2101000D@student.tp.edu.sg" DisplayName="Use Outlook 365" EmailAddress="2101000D@student.tp.edu.sg" sap:VirtualizedContainerService.HintSize="510,794" sap2010:WorkflowViewState.IdRef="ExchangeApplicationCard_2" UseConnectionService="False">
+                        <umab:ExchangeApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" SharedMailbox="{x:Null}" Account="2101000D@student.tp.edu.sg" DisplayName="Use Outlook 365" EmailAddress="2101000D@student.tp.edu.sg" sap:VirtualizedContainerService.HintSize="510,720.666666666667" sap2010:WorkflowViewState.IdRef="ExchangeApplicationCard_2" UseConnectionService="False">
                           <umab:ExchangeApplicationCard.ApplicationId>
                             <InArgument x:TypeArguments="x:String">
                               <Literal x:TypeArguments="x:String" Value="" />
@@ -371,23 +354,17 @@
                               <ActivityAction.Argument>
                                 <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Exchange" />
                               </ActivityAction.Argument>
-                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,564.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,491.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_17">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <Assign sap:VirtualizedContainerService.HintSize="434,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_4">
-                                  <Assign.To>
-                                    <OutArgument x:TypeArguments="x:String">[ccEmailAddress]</OutArgument>
-                                  </Assign.To>
-                                  <Assign.Value>
-                                    <InArgument x:TypeArguments="x:String">[ccEmailAddress.Replace(",",";")]</InArgument>
-                                  </Assign.Value>
-                                </Assign>
-                                <umab:SendMailX Bcc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Exchange]" Body="[emailTranslatedContent]" BodyType="Text" Cc="[ccEmailAddress]" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,371.333333333333" sap2010:WorkflowViewState.IdRef="SendMailX_5" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="[emailSubject]" To="[emailAddress]" UseDocumentAsBody="False">
+                                <umab:SendMailX Bcc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Exchange]" Body="[emailTranslatedContent]" BodyType="Text" Cc="[ccEmailAddress]" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,399.333333333333" sap2010:WorkflowViewState.IdRef="SendMailX_5" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="[emailSubject]" To="[emailAddress]" UseDocumentAsBody="False">
                                   <umab:SendMailX.Files>
-                                    <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                                    <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                                      <InArgument x:TypeArguments="x:String">[excelAttach]</InArgument>
+                                    </scg:List>
                                   </umab:SendMailX.Files>
                                   <umab:SendMailX.HtmlBodyFromFile>
                                     <umabh:HtmlContentArgument FilePath="{x:Null}">
