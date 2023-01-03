@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="681.333333333333,1649" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:g="clr-namespace:GASTranslate_Activities;assembly=GASTranslate.Activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:p2="http://schemas.uipath.com/workflow/activities/intelligentocr/classification" xmlns:p3="http://schemas.uipath.com/workflow/activities/document-processing-contracts/dom" xmlns:p4="http://schemas.uipath.com/workflow/activities/document-processing-contracts/classification" xmlns:p5="http://schemas.uipath.com/workflow/activities/intelligentocr/extraction" xmlns:p6="http://schemas.uipath.com/workflow/activities/document-processing-contracts/extraction" xmlns:p7="http://schemas.uipath.com/workflow/activities/document-processing-contracts/results" xmlns:p8="http://schemas.uipath.com/workflow/activities/document-processing-contracts/taxonomy" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:uascw="clr-namespace:UiPath.Activities.System.Compression.Workflow;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:zc="clr-namespace:Zell.CognitiveServices;assembly=Zell.CognitiveServices.Activities">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="681.333333333333,1649" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:p2="http://schemas.uipath.com/workflow/activities/intelligentocr/classification" xmlns:p3="http://schemas.uipath.com/workflow/activities/document-processing-contracts/dom" xmlns:p4="http://schemas.uipath.com/workflow/activities/document-processing-contracts/classification" xmlns:p5="http://schemas.uipath.com/workflow/activities/intelligentocr/extraction" xmlns:p6="http://schemas.uipath.com/workflow/activities/document-processing-contracts/extraction" xmlns:p7="http://schemas.uipath.com/workflow/activities/document-processing-contracts/results" xmlns:p8="http://schemas.uipath.com/workflow/activities/document-processing-contracts/taxonomy" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:uascw="clr-namespace:UiPath.Activities.System.Compression.Workflow;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:zc="clr-namespace:Zell.CognitiveServices;assembly=Zell.CognitiveServices.Activities">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="71">
       <x:String>System.Activities</x:String>
@@ -818,7 +818,7 @@
             <av:Size x:Key="ShapeSize">200,69.3333333333333</av:Size>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <Sequence sap:VirtualizedContainerService.HintSize="200,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_94">
+        <Sequence sap:VirtualizedContainerService.HintSize="1319.33333333333,3108" sap2010:WorkflowViewState.IdRef="Sequence_94">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="emailDetailText" />
           </Sequence.Variables>
@@ -857,13 +857,13 @@
           </ui:ExcelApplicationScope>
           <ui:OutputDataTable DataTable="[emailDetail]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="1277.33333333333,80.6666666666667" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[emailDetailText]" />
           <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="1277.33333333333,62.6666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="[emailDetailText]" />
-          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[emailDetail]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1277.33333333333,2402" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[emailDetail]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1277.33333333333,2493.33333333333" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
             <ui:ForEachRow.Body>
               <ActivityAction x:TypeArguments="sd1:DataRow">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="sd1:DataRow" Name="CurrentRow" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1243.33333333333,2278" sap2010:WorkflowViewState.IdRef="Sequence_100">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1243.33333333333,2369.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_100">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -930,16 +930,16 @@
                       </scg:List>
                     </uascw:CompressFiles.ContentToArchive>
                   </uascw:CompressFiles>
-                  <If Condition="[emailTranslate=&quot;Yes&quot;]" sap:VirtualizedContainerService.HintSize="1201.33333333333,410.666666666667" sap2010:WorkflowViewState.IdRef="If_21">
+                  <If Condition="[emailTranslate=&quot;Yes&quot;]" sap:VirtualizedContainerService.HintSize="1201.33333333333,502" sap2010:WorkflowViewState.IdRef="If_21">
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="304,216" sap2010:WorkflowViewState.IdRef="Sequence_107">
+                      <Sequence sap:VirtualizedContainerService.HintSize="320.666666666667,307.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_107">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <g:TranslateText TimeoutMilliseconds="{x:Null}" WebApplicationURL="{x:Null}" sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="TranslateText_1" Result="[emailTranslatedContent]" SourceLanguage="en" TargetLanguage="ja" Text="[emailContent]" />
-                        <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_20">
+                        <zc:TextTranslator ApiKey="{x:Null}" DetectedSourceLanguage="{x:Null}" TargetLanguageCode="{x:Null}" TranslatedText="{x:Null}" DisplayName="Text translator" sap:VirtualizedContainerService.HintSize="278.666666666667,113.333333333333" sap2010:WorkflowViewState.IdRef="TextTranslator_4" Text="[emailContent]" />
+                        <Assign sap:VirtualizedContainerService.HintSize="278.666666666667,62" sap2010:WorkflowViewState.IdRef="Assign_20">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:String">[emailContent]</OutArgument>
                           </Assign.To>
