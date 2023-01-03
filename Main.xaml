@@ -223,42 +223,42 @@
                         <p2:IntelligentKeywordClassifier LearningData="{x:Null}" TimeoutMs="{x:Null}" ApiKey="[APIKey]" DisplayName="Intelligent Keyword Classifier" Endpoint="https://du.uipath.com/svc/intelligentkeywords" sap:VirtualizedContainerService.HintSize="234,214.666666666667" sap2010:WorkflowViewState.IdRef="IntelligentKeywordClassifier_1" LearningFilePath="DocumentProcessing\classifierLearning.json" PersistenceId="UI894d165193ab4ca6a13b257e27ce181b">
                           <p2:IntelligentKeywordClassifier.ClassifierResult>
                             <OutArgument x:TypeArguments="p4:ClassifierResult">
-                              <DelegateArgumentReference x:TypeArguments="p4:ClassifierResult">
+                              <DelegateArgumentReference x:TypeArguments="p4:ClassifierResult" sap2010:WorkflowViewState.IdRef="DelegateArgumentReference`1_1">
                                 <DelegateOutArgument x:TypeArguments="p4:ClassifierResult" Name="ClassifierResult" />
                               </DelegateArgumentReference>
                             </OutArgument>
                           </p2:IntelligentKeywordClassifier.ClassifierResult>
                           <p2:IntelligentKeywordClassifier.DocumentObjectModel>
                             <InArgument x:TypeArguments="p3:Document">
-                              <DelegateArgumentValue x:TypeArguments="p3:Document">
+                              <DelegateArgumentValue x:TypeArguments="p3:Document" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_2">
                                 <DelegateInArgument x:TypeArguments="p3:Document" Name="DocumentObjectModel" />
                               </DelegateArgumentValue>
                             </InArgument>
                           </p2:IntelligentKeywordClassifier.DocumentObjectModel>
                           <p2:IntelligentKeywordClassifier.DocumentPath>
                             <InArgument x:TypeArguments="x:String">
-                              <DelegateArgumentValue x:TypeArguments="x:String">
+                              <DelegateArgumentValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_3">
                                 <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
                               </DelegateArgumentValue>
                             </InArgument>
                           </p2:IntelligentKeywordClassifier.DocumentPath>
                           <p2:IntelligentKeywordClassifier.DocumentText>
                             <InArgument x:TypeArguments="x:String">
-                              <DelegateArgumentValue x:TypeArguments="x:String">
+                              <DelegateArgumentValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_1">
                                 <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
                               </DelegateArgumentValue>
                             </InArgument>
                           </p2:IntelligentKeywordClassifier.DocumentText>
                           <p2:IntelligentKeywordClassifier.DocumentTypes>
                             <InArgument x:TypeArguments="p4:ClassifierDocumentType[]">
-                              <DelegateArgumentValue x:TypeArguments="p4:ClassifierDocumentType[]">
+                              <DelegateArgumentValue x:TypeArguments="p4:ClassifierDocumentType[]" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_5">
                                 <DelegateInArgument x:TypeArguments="p4:ClassifierDocumentType[]" Name="DocumentTypes" />
                               </DelegateArgumentValue>
                             </InArgument>
                           </p2:IntelligentKeywordClassifier.DocumentTypes>
                           <p2:IntelligentKeywordClassifier.PredictionId>
                             <InArgument x:TypeArguments="x:String">
-                              <DelegateArgumentValue x:TypeArguments="x:String">
+                              <DelegateArgumentValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_4">
                                 <DelegateInArgument x:TypeArguments="x:String" Name="PredictionId" />
                               </DelegateArgumentValue>
                             </InArgument>
@@ -271,49 +271,49 @@
                         <p5:FormExtractor SerializedSignatureFields="{x:Null}" ApiKey="[APIKey]" DisplayName="Form Extractor" Endpoint="https://du.uipath.com/svc/formextractor" sap:VirtualizedContainerService.HintSize="234,164.666666666667" sap2010:WorkflowViewState.IdRef="FormExtractor_1" MinOverlapPercentage="65" PersistenceId="UIaeef07b510274ebb84fd9e3835b68b92" SerializedSettings="{}{&quot;DocTypeSettings&quot;:[{&quot;DocumentTypeId&quot;:&quot;NoGroup.NoCategory.Invoice&quot;,&quot;SignatureFields&quot;:[],&quot;HandwritingFields&quot;:[],&quot;BooleanSynonymsForYes&quot;:[],&quot;BooleanSynonymsForNo&quot;:[],&quot;CaseSensitiveSynonyms&quot;:false},{&quot;DocumentTypeId&quot;:&quot;NoGroup.NoCategory.W-9Form&quot;,&quot;SignatureFields&quot;:[{&quot;FieldId&quot;:&quot;NoGroup.NoCategory.W-9Form.Signature&quot;}],&quot;HandwritingFields&quot;:[],&quot;BooleanSynonymsForYes&quot;:[],&quot;BooleanSynonymsForNo&quot;:[],&quot;CaseSensitiveSynonyms&quot;:false}]}" SerializedTemplates="[{&quot;DocumentTypeId&quot;:&quot;NoGroup.NoCategory.W-9Form&quot;,&quot;FormId&quot;:&quot;a69b9f5b&quot;,&quot;FormName&quot;:&quot;W-9&quot;,&quot;OriginalFileExtension&quot;:&quot;pdf&quot;,&quot;Pages&quot;:[{&quot;Page&quot;:0,&quot;Size&quot;:[0.0,0.0,612.0,792.0],&quot;SkewAngle&quot;:-0.1,&quot;Evidence&quot;:[{&quot;Text&quot;:&quot;IRS.&quot;,&quot;Box&quot;:[9.33,521.87,18.13,8.27]},{&quot;Text&quot;:&quot;www.irs.gov/FormW9&quot;,&quot;Box&quot;:[17.6,184.0,81.07,9.07]},{&quot;Text&quot;:&quot;Taxpayer&quot;,&quot;Box&quot;:[252.0,78.67,44.8,10.4]},{&quot;Text&quot;:&quot;Certification&quot;,&quot;Box&quot;:[345.33,79.2,58.4,9.33]},{&quot;Text&quot;:&quot;W-9&quot;,&quot;Box&quot;:[684.8,485.6,20.27,9.33]}],&quot;Fields&quot;:[{&quot;Field&quot;:&quot;NoGroup.NoCategory.W-9Form.PersonName&quot;,&quot;Box&quot;:[36.6572,48.178,495.3953,14.6629]},{&quot;Field&quot;:&quot;NoGroup.NoCategory.W-9Form.BusinessName&quot;,&quot;Box&quot;:[61.7935,49.2253,492.2532,14.6629]},{&quot;Field&quot;:&quot;NoGroup.NoCategory.W-9Form.Address&quot;,&quot;Box&quot;:[187.4752,45.0359,322.583,18.8523]},{&quot;Field&quot;:&quot;NoGroup.NoCategory.W-9Form.Signature&quot;,&quot;Box&quot;:[473.401,114.1609,249.2687,27.231]}],&quot;Tables&quot;:[]}],&quot;AnchorBasedConfiguration&quot;:{&quot;AnchorBasedFieldConfiguration&quot;:[]}},{&quot;DocumentTypeId&quot;:&quot;NoGroup.NoCategory.RoboproInvoices&quot;,&quot;FormId&quot;:&quot;1f174703&quot;,&quot;FormName&quot;:&quot;Robopro&quot;,&quot;OriginalFileExtension&quot;:&quot;pdf&quot;,&quot;Pages&quot;:[{&quot;Page&quot;:0,&quot;Size&quot;:[0.0,0.0,595.0,841.0],&quot;SkewAngle&quot;:0.0,&quot;Evidence&quot;:[{&quot;Text&quot;:&quot;robopro&quot;,&quot;Box&quot;:[83.78,81.45,87.22,22.14]},{&quot;Text&quot;:&quot;Johannesburg&quot;,&quot;Box&quot;:[127.25,43.56,58.94,8.78]},{&quot;Text&quot;:&quot;leon@robopro.co&quot;,&quot;Box&quot;:[158.45,43.56,71.54,8.78]},{&quot;Text&quot;:&quot;BILL&quot;,&quot;Box&quot;:[247.1,52.8,18.67,7.88]},{&quot;Text&quot;:&quot;leon@robopro.co]&quot;,&quot;Box&quot;:[718.57,274.81,74.09,8.78]}],&quot;Fields&quot;:[{&quot;Field&quot;:&quot;NoGroup.NoCategory.RoboproInvoices.InvoiceNumber&quot;,&quot;Box&quot;:[152.7382,314.6406,134.4096,15.2738]},{&quot;Field&quot;:&quot;NoGroup.NoCategory.RoboproInvoices.Date&quot;,&quot;Box&quot;:[154.7747,453.1232,95.7159,13.2373]},{&quot;Field&quot;:&quot;NoGroup.NoCategory.RoboproInvoices.CustomerName&quot;,&quot;Box&quot;:[260.6731,41.7484,207.7239,13.2373]},{&quot;Field&quot;:&quot;NoGroup.NoCategory.RoboproInvoices.Total&quot;,&quot;Box&quot;:[608.9161,379.8089,169.0302,21.3833]}],&quot;Tables&quot;:[{&quot;FieldId&quot;:&quot;NoGroup.NoCategory.RoboproInvoices.Items&quot;,&quot;Headers&quot;:[{&quot;FieldId&quot;:&quot;NoGroup.NoCategory.RoboproInvoices.Items.Description&quot;,&quot;Box&quot;:[361.4803,43.7849,263.7279,15.2738]},{&quot;FieldId&quot;:&quot;NoGroup.NoCategory.RoboproInvoices.Items.Qty(Hours)&quot;,&quot;Box&quot;:[362.4985,318.7136,59.0588,15.2738]}],&quot;Cells&quot;:[{&quot;Row&quot;:0,&quot;Column&quot;:0,&quot;Box&quot;:[380.8271,43.7849,269.8374,12.2191]},{&quot;Row&quot;:0,&quot;Column&quot;:1,&quot;Box&quot;:[381.8454,318.7136,57.0222,11.2008]},{&quot;Row&quot;:1,&quot;Column&quot;:0,&quot;Box&quot;:[393.0462,44.8032,266.7826,12.2191]},{&quot;Row&quot;:1,&quot;Column&quot;:1,&quot;Box&quot;:[391.0097,316.6771,62.1135,14.2556]}]}]}],&quot;AnchorBasedConfiguration&quot;:{&quot;AnchorBasedFieldConfiguration&quot;:[]}}]" Timeout="100000">
                           <p5:FormExtractor.DocumentBounds>
                             <InArgument x:TypeArguments="p7:ResultsDocumentBounds">
-                              <DelegateArgumentValue x:TypeArguments="p7:ResultsDocumentBounds">
+                              <DelegateArgumentValue x:TypeArguments="p7:ResultsDocumentBounds" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_7">
                                 <DelegateInArgument x:TypeArguments="p7:ResultsDocumentBounds" Name="DocumentBounds" />
                               </DelegateArgumentValue>
                             </InArgument>
                           </p5:FormExtractor.DocumentBounds>
                           <p5:FormExtractor.DocumentObjectModel>
                             <InArgument x:TypeArguments="p3:Document">
-                              <DelegateArgumentValue x:TypeArguments="p3:Document">
+                              <DelegateArgumentValue x:TypeArguments="p3:Document" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_9">
                                 <DelegateInArgument x:TypeArguments="p3:Document" Name="DocumentObjectModel" />
                               </DelegateArgumentValue>
                             </InArgument>
                           </p5:FormExtractor.DocumentObjectModel>
                           <p5:FormExtractor.DocumentPath>
                             <InArgument x:TypeArguments="x:String">
-                              <DelegateArgumentValue x:TypeArguments="x:String">
+                              <DelegateArgumentValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_10">
                                 <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
                               </DelegateArgumentValue>
                             </InArgument>
                           </p5:FormExtractor.DocumentPath>
                           <p5:FormExtractor.DocumentText>
                             <InArgument x:TypeArguments="x:String">
-                              <DelegateArgumentValue x:TypeArguments="x:String">
+                              <DelegateArgumentValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_8">
                                 <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
                               </DelegateArgumentValue>
                             </InArgument>
                           </p5:FormExtractor.DocumentText>
                           <p5:FormExtractor.ExtractorDocumentType>
                             <InArgument x:TypeArguments="p6:ExtractorDocumentType">
-                              <DelegateArgumentValue x:TypeArguments="p6:ExtractorDocumentType">
+                              <DelegateArgumentValue x:TypeArguments="p6:ExtractorDocumentType" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_6">
                                 <DelegateInArgument x:TypeArguments="p6:ExtractorDocumentType" Name="ExtractorDocumentType" />
                               </DelegateArgumentValue>
                             </InArgument>
                           </p5:FormExtractor.ExtractorDocumentType>
                           <p5:FormExtractor.ExtractorResult>
                             <OutArgument x:TypeArguments="p6:ExtractorResult">
-                              <DelegateArgumentReference x:TypeArguments="p6:ExtractorResult">
+                              <DelegateArgumentReference x:TypeArguments="p6:ExtractorResult" sap2010:WorkflowViewState.IdRef="DelegateArgumentReference`1_2">
                                 <DelegateOutArgument x:TypeArguments="p6:ExtractorResult" Name="ExtractorResult" />
                               </DelegateArgumentReference>
                             </OutArgument>
                           </p5:FormExtractor.ExtractorResult>
                           <p5:FormExtractor.PredictionId>
                             <InArgument x:TypeArguments="x:String">
-                              <DelegateArgumentValue x:TypeArguments="x:String">
+                              <DelegateArgumentValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_11">
                                 <DelegateInArgument x:TypeArguments="x:String" Name="PredictionId" />
                               </DelegateArgumentValue>
                             </InArgument>
@@ -587,7 +587,7 @@
               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence sap:VirtualizedContainerService.HintSize="1033.33333333333,6154" sap2010:WorkflowViewState.IdRef="Sequence_75">
+          <Sequence sap:VirtualizedContainerService.HintSize="1033.33333333333,6172.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_75">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -629,15 +629,15 @@
                 <OutArgument x:TypeArguments="x:String">[emailType]</OutArgument>
               </ui:InputDialog.Result>
             </ui:InputDialog>
-            <ui:InterruptibleWhile Condition="[emailFormat=False]" DisplayName="While" sap:VirtualizedContainerService.HintSize="991.333333333333,600.666666666667" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_12">
+            <ui:InterruptibleWhile Condition="[emailFormat=False]" DisplayName="While" sap:VirtualizedContainerService.HintSize="991.333333333333,604.666666666667" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_12">
               <ui:InterruptibleWhile.Body>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,432.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_79">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,435.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_79">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Ask user for Email Address" sap:VirtualizedContainerService.HintSize="334,242" sap2010:WorkflowViewState.IdRef="InputDialog_19" IsPassword="False" Label="Please provide the receiver's email address" Title="Email Address">
+                  <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Ask user for Email Address" sap:VirtualizedContainerService.HintSize="334,244.666666666667" sap2010:WorkflowViewState.IdRef="InputDialog_19" IsPassword="False" Label="Please provide the receiver's email address" Title="Email Address">
                     <ui:InputDialog.Result>
                       <OutArgument x:TypeArguments="x:String">[emailAddress]</OutArgument>
                     </ui:InputDialog.Result>
@@ -646,29 +646,29 @@
                 </Sequence>
               </ui:InterruptibleWhile.Body>
             </ui:InterruptibleWhile>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="991.333333333333,388" sap2010:WorkflowViewState.IdRef="Sequence_80">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="991.333333333333,391.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_80">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="334,296" sap2010:WorkflowViewState.IdRef="InputDialog_20" IsPassword="False" Label="Do you wish to cc somebody in your email?" OptionsString="Yes;No" Title="Email CC">
+              <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="334,299.333333333333" sap2010:WorkflowViewState.IdRef="InputDialog_20" IsPassword="False" Label="Do you wish to cc somebody in your email?" OptionsString="Yes;No" Title="Email CC">
                 <ui:InputDialog.Result>
                   <OutArgument x:TypeArguments="x:String">[optionForCc]</OutArgument>
                 </ui:InputDialog.Result>
               </ui:InputDialog>
             </Sequence>
-            <If Condition="[optionForCc=&quot;Yes&quot;]" sap:VirtualizedContainerService.HintSize="991.333333333333,2118" sap2010:WorkflowViewState.IdRef="If_14">
+            <If Condition="[optionForCc=&quot;Yes&quot;]" sap:VirtualizedContainerService.HintSize="991.333333333333,2118.66666666667" sap2010:WorkflowViewState.IdRef="If_14">
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="683.333333333333,1954" sap2010:WorkflowViewState.IdRef="Sequence_73">
+                <Sequence sap:VirtualizedContainerService.HintSize="683.333333333333,1954.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_73">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InterruptibleWhile Condition="[ccEmailFormat=False]" DisplayName="While" sap:VirtualizedContainerService.HintSize="641.333333333333,1268.66666666667" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_13">
+                  <ui:InterruptibleWhile Condition="[ccEmailFormat=False]" DisplayName="While" sap:VirtualizedContainerService.HintSize="641.333333333333,1269.33333333333" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_13">
                     <ui:InterruptibleWhile.Body>
-                      <Sequence sap:VirtualizedContainerService.HintSize="604.666666666667,1099.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_82">
+                      <Sequence sap:VirtualizedContainerService.HintSize="604.666666666667,1100" sap2010:WorkflowViewState.IdRef="Sequence_82">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -679,19 +679,19 @@
                             <OutArgument x:TypeArguments="x:String">[ccEmailAddress]</OutArgument>
                           </ui:InputDialog.Result>
                         </ui:InputDialog>
-                        <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="562.666666666667,722.666666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[Split(ccEmailAddress,&quot;,&quot;)]">
+                        <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="562.666666666667,723.333333333333" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[Split(ccEmailAddress,&quot;,&quot;)]">
                           <ui:ForEach.Body>
                             <ActivityAction x:TypeArguments="x:Object">
                               <ActivityAction.Argument>
                                 <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
                               </ActivityAction.Argument>
-                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,598" sap2010:WorkflowViewState.IdRef="Sequence_83">
+                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,598.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_83">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="484,62" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[item.ToString]" />
+                                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="484,62.6666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[item.ToString]" />
                                 <ui:IsMatch BuilderPattern="((?&gt;[a-zA-Z\d!#$%&amp;'*+\-\/=?^_`{|}~]+\x20*|&quot;((?=[\x01-\x7f])[^&quot;\\]|\\[\x01-\x7f])*&quot;\x20*)*(?&lt;angle&gt;&lt;))?((?!\.)(?&gt;\.?[a-zA-Z\d!#$%&amp;'*+\-\/=?^_`{|}~]+)+|&quot;((?=[\x01-\x7f])[^&quot;\\]|\\[\x01-\x7f])*&quot;)@(((?!-)[a-zA-Z\d\-]+(?&lt;!-)\.)+[a-zA-Z]{2,}|\[(((?(?&lt;!\[)\.)(25[0-5]|2[0-4]\d|[01]?\d?\d)){4}|[a-zA-Z\d\-]*[a-zA-Z\d]:((?=[\x01-\x7f])[^\\\[\]]|\\[\x01-\x7f])+)\])(?(angle)&gt;)" DisplayName="Is Match" sap:VirtualizedContainerService.HintSize="484,58.6666666666667" sap2010:WorkflowViewState.IdRef="IsMatch_3" Input="[item.ToString]" IsBuilderTabModified="True" Model="[{&quot;Index&quot;:0,&quot;OperationID&quot;:&quot;EMAIL&quot;,&quot;OperationName&quot;:&quot;Email&quot;,&quot;OperationValue&quot;:&quot;((?&gt;[a-zA-Z\\d!#$%&amp;'*+\\-\\\/=?^_`{|}~]+\\x20*|\&quot;((?=[\\x01-\\x7f])[^\&quot;\\\\]|\\\\[\\x01-\\x7f])*\&quot;\\x20*)*(?&lt;angle&gt;&lt;))?((?!\\.)(?&gt;\\.?[a-zA-Z\\d!#$%&amp;'*+\\-\\\/=?^_`{|}~]+)+|\&quot;((?=[\\x01-\\x7f])[^\&quot;\\\\]|\\\\[\\x01-\\x7f])*\&quot;)@(((?!-)[a-zA-Z\\d\\-]+(?&lt;!-)\\.)+[a-zA-Z]{2,}|\\[(((?(?&lt;!\\[)\\.)(25[0-5]|2[0-4]\\d|[01]?\\d?\\d)){4}|[a-zA-Z\\d\\-]*[a-zA-Z\\d]:((?=[\\x01-\\x7f])[^\\\\\\[\\]]|\\\\[\\x01-\\x7f])+)\\])(?(angle)&gt;)&quot;,&quot;QuantifierFirstValue&quot;:&quot;1&quot;,&quot;QuantifierID&quot;:&quot;EXT&quot;,&quot;QuantifierName&quot;:&quot;Exactly&quot;,&quot;QuantifierSecondValue&quot;:null}]" Pattern="((?&gt;[a-zA-Z\d!#$%&amp;'*+\-\/=?^_`{|}~]+\x20*|&quot;((?=[\x01-\x7f])[^&quot;\\]|\\[\x01-\x7f])*&quot;\x20*)*(?&lt;angle&gt;&lt;))?((?!\.)(?&gt;\.?[a-zA-Z\d!#$%&amp;'*+\-\/=?^_`{|}~]+)+|&quot;((?=[\x01-\x7f])[^&quot;\\]|\\[\x01-\x7f])*&quot;)@(((?!-)[a-zA-Z\d\-]+(?&lt;!-)\.)+[a-zA-Z]{2,}|\[(((?(?&lt;!\[)\.)(25[0-5]|2[0-4]\d|[01]?\d?\d)){4}|[a-zA-Z\d\-]*[a-zA-Z\d]:((?=[\x01-\x7f])[^\\\[\]]|\\[\x01-\x7f])+)\])(?(angle)&gt;)" RegexOption="IgnoreCase, Compiled" Result="[ccEmailFormat]" />
                                 <If Condition="[ccEmailFormat=False]" sap:VirtualizedContainerService.HintSize="484,305.333333333333" sap2010:WorkflowViewState.IdRef="If_17">
                                   <If.Then>
@@ -771,22 +771,22 @@
                 </Assign>
               </If.Else>
             </If>
-            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Ask user for Email Subject" sap:VirtualizedContainerService.HintSize="991.333333333333,242" sap2010:WorkflowViewState.IdRef="InputDialog_22" IsPassword="False" Label="Please type in the Email Subject" Title="Email Subject">
+            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Ask user for Email Subject" sap:VirtualizedContainerService.HintSize="991.333333333333,244.666666666667" sap2010:WorkflowViewState.IdRef="InputDialog_22" IsPassword="False" Label="Please type in the Email Subject" Title="Email Subject">
               <ui:InputDialog.Result>
                 <OutArgument x:TypeArguments="x:String">[emailSubject]</OutArgument>
               </ui:InputDialog.Result>
             </ui:InputDialog>
-            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Ask user for Email Content" sap:VirtualizedContainerService.HintSize="991.333333333333,242" sap2010:WorkflowViewState.IdRef="InputDialog_23" IsPassword="False" Label="Please insert the content of your email." Title="Content">
+            <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Ask user for Email Content" sap:VirtualizedContainerService.HintSize="991.333333333333,244.666666666667" sap2010:WorkflowViewState.IdRef="InputDialog_23" IsPassword="False" Label="Please insert the content of your email." Title="Content">
               <ui:InputDialog.Result>
                 <OutArgument x:TypeArguments="x:String">[emailContent]</OutArgument>
               </ui:InputDialog.Result>
             </ui:InputDialog>
-            <ui:InputDialog Options="{x:Null}" DisplayName="Ask user whether to translate Email" sap:VirtualizedContainerService.HintSize="991.333333333333,296" sap2010:WorkflowViewState.IdRef="InputDialog_24" IsPassword="False" Label="Do you want to translate the content into Mandarin?" OptionsString="Yes;No" Title="Translate">
+            <ui:InputDialog Options="{x:Null}" DisplayName="Ask user whether to translate Email" sap:VirtualizedContainerService.HintSize="991.333333333333,299.333333333333" sap2010:WorkflowViewState.IdRef="InputDialog_24" IsPassword="False" Label="Do you want to translate the content into Mandarin?" OptionsString="Yes;No" Title="Translate">
               <ui:InputDialog.Result>
                 <OutArgument x:TypeArguments="x:String">[emailTranslate]</OutArgument>
               </ui:InputDialog.Result>
             </ui:InputDialog>
-            <If Condition="[emailTranslate = &quot;Yes&quot;]" sap:VirtualizedContainerService.HintSize="991.333333333333,367.333333333333" sap2010:WorkflowViewState.IdRef="If_15">
+            <If Condition="[emailTranslate = &quot;Yes&quot;]" sap:VirtualizedContainerService.HintSize="991.333333333333,369.333333333333" sap2010:WorkflowViewState.IdRef="If_15">
               <If.Then>
                 <Sequence sap:VirtualizedContainerService.HintSize="320.666666666667,205.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_74">
                   <sap:WorkflowViewStateService.ViewState>
@@ -798,7 +798,7 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Assign sap:VirtualizedContainerService.HintSize="262,61.3333333333333" sap2010:WorkflowViewState.IdRef="Assign_16">
+                <Assign sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_16">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:String">[emailTranslatedContent]</OutArgument>
                   </Assign.To>
@@ -938,7 +938,7 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <zc:TextTranslator ApiKey="{x:Null}" DetectedSourceLanguage="{x:Null}" TargetLanguageCode="{x:Null}" TranslatedText="{x:Null}" DisplayName="Text translator" sap:VirtualizedContainerService.HintSize="278.666666666667,113.333333333333" sap2010:WorkflowViewState.IdRef="TextTranslator_4" Text="[emailContent]" />
+                        <zc:TextTranslator ApiKey="{x:Null}" DetectedSourceLanguage="{x:Null}" TranslatedText="{x:Null}" DisplayName="Text translator" sap:VirtualizedContainerService.HintSize="278.666666666667,113.333333333333" sap2010:WorkflowViewState.IdRef="TextTranslator_4" TargetLanguageCode="zh-Hans" Text="[emailContent]" />
                         <Assign sap:VirtualizedContainerService.HintSize="278.666666666667,62" sap2010:WorkflowViewState.IdRef="Assign_20">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:String">[emailContent]</OutArgument>
@@ -970,10 +970,10 @@
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <umab:SendMailX Bcc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Gmail]" Body="[emailContent]" BodyType="Text" Cc="[ccEmailAddress]" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,427.333333333333" sap2010:WorkflowViewState.IdRef="SendMailX_9" Importance="Normal" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="[emailSubject]" To="[emailAddress]" UseDocumentAsBody="False">
+                                <umab:SendMailX Bcc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Gmail]" Body="[emailContent]" BodyType="Text" Cc="[ccEmailAddress]" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,427.333333333333" sap2010:WorkflowViewState.IdRef="SendMailX_9" Importance="Normal" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="[emailSubject]" To="[emailAddress.ToString]" UseDocumentAsBody="False">
                                   <umab:SendMailX.Files>
                                     <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
-                                      <InArgument x:TypeArguments="x:String">[folderAttach.ToString]</InArgument>
+                                      <InArgument x:TypeArguments="x:String">[folderAttach]</InArgument>
                                     </scg:List>
                                   </umab:SendMailX.Files>
                                   <umab:SendMailX.HtmlBodyFromFile>
@@ -1035,7 +1035,7 @@
                                           <umab:SendMailX Bcc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Exchange]" Body="[emailContent]" BodyType="Text" Cc="[ccEmailAddress]" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,404" sap2010:WorkflowViewState.IdRef="SendMailX_10" Importance="Normal" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="[emailSubject]" To="[emailAddress]" UseDocumentAsBody="False">
                                             <umab:SendMailX.Files>
                                               <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
-                                                <InArgument x:TypeArguments="x:String">[folderAttach.ToString]</InArgument>
+                                                <InArgument x:TypeArguments="x:String">[folderAttach]</InArgument>
                                               </scg:List>
                                             </umab:SendMailX.Files>
                                             <umab:SendMailX.HtmlBodyFromFile>
