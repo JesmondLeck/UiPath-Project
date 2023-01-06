@@ -117,7 +117,6 @@
       <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
       <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -656,7 +655,7 @@
                 <av:PointCollection x:Key="ConnectorLocation">310,455.333333333333 310,503.666666666667</av:PointCollection>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence sap:VirtualizedContainerService.HintSize="1319.33333333333,4810" sap2010:WorkflowViewState.IdRef="Sequence_94">
+            <Sequence sap:VirtualizedContainerService.HintSize="1319.33333333333,4928" sap2010:WorkflowViewState.IdRef="Sequence_94">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -690,13 +689,13 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:ExcelApplicationScope>
-              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[emailDetail]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1277.33333333333,4418.66666666667" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
+              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[emailDetail]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="1277.33333333333,4536.66666666667" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd1:DataRow">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="sd1:DataRow" Name="CurrentRow" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1243.33333333333,4294.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_100">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1243.33333333333,4412.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_100">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -890,7 +889,7 @@
                           </Sequence>
                         </If.Else>
                       </If>
-                      <If Condition="[emailType=&quot;Gmail&quot; Or emailType=&quot;gmail&quot;]" sap:VirtualizedContainerService.HintSize="1201.33333333333,1286.66666666667" sap2010:WorkflowViewState.IdRef="If_20">
+                      <If Condition="[emailType=&quot;Gmail&quot; Or emailType=&quot;gmail&quot;]" sap:VirtualizedContainerService.HintSize="1201.33333333333,1404.66666666667" sap2010:WorkflowViewState.IdRef="If_20">
                         <If.Then>
                           <Sequence sap:VirtualizedContainerService.HintSize="552,798" sap2010:WorkflowViewState.IdRef="Sequence_102">
                             <sap:WorkflowViewStateService.ViewState>
@@ -910,7 +909,7 @@
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <umab:SendMailX Bcc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Gmail]" Body="[emailContent]" BodyType="Text" Cc="[ccEmailAddress]" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,427.333333333333" sap2010:WorkflowViewState.IdRef="SendMailX_9" Importance="Normal" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="[emailSubject]" To="[emailAddress.ToString]" UseDocumentAsBody="False">
+                                    <umab:SendMailX Bcc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Gmail]" Body="[emailContent]" BodyType="Text" Cc="[ccEmailAddress]" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,427.333333333333" sap2010:WorkflowViewState.IdRef="SendMailX_9" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="[emailSubject]" To="[emailAddress.ToString]" UseDocumentAsBody="False">
                                       <umab:SendMailX.Files>
                                         <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
                                           <InArgument x:TypeArguments="x:String">Extraction.xlsx</InArgument>
@@ -944,7 +943,7 @@
                           </Sequence>
                         </If.Then>
                         <If.Else>
-                          <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="603.333333333333,1122.66666666667" sap2010:WorkflowViewState.IdRef="IfElseIf_5">
+                          <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="603.333333333333,1240.66666666667" sap2010:WorkflowViewState.IdRef="IfElseIf_5">
                             <ui:IfElseIf.ConditionBlocks>
                               <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                                 <ui:IfElseIfBlock BlockType="If" Condition="[emailType=&quot;Outlook&quot; Or emailType=&quot;outlook&quot;]">
@@ -980,7 +979,7 @@
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <umab:SendMailX Bcc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Exchange]" Body="[emailContent]" BodyType="Text" Cc="[ccEmailAddress]" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,404" sap2010:WorkflowViewState.IdRef="SendMailX_10" Importance="Normal" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="[emailSubject]" To="[emailAddress]" UseDocumentAsBody="False">
+                                              <umab:SendMailX Bcc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Exchange]" Body="[emailContent]" BodyType="Text" Cc="[ccEmailAddress]" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,404" sap2010:WorkflowViewState.IdRef="SendMailX_10" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="[emailSubject]" To="[emailAddress]" UseDocumentAsBody="False">
                                                 <umab:SendMailX.Files>
                                                   <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
                                                     <InArgument x:TypeArguments="x:String">Extraction.xlsx</InArgument>
@@ -1006,6 +1005,17 @@
                                           </InArgument>
                                         </umab:ExchangeApplicationCard.TenantId>
                                       </umab:ExchangeApplicationCard>
+                                    </Sequence>
+                                  </ui:IfElseIfBlock.Then>
+                                </ui:IfElseIfBlock>
+                                <ui:IfElseIfBlock BlockType="Else">
+                                  <ui:IfElseIfBlock.Then>
+                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="200,84.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_134">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
                                     </Sequence>
                                   </ui:IfElseIfBlock.Then>
                                 </ui:IfElseIfBlock>
@@ -1045,15 +1055,9 @@
                 </sap:WorkflowViewStateService.ViewState>
                 <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="SentEmailDetail.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
-                    <InOutArgument x:TypeArguments="sd1:DataTable" x:Key="emailDetail">
-                      <mva:VisualBasicReference x:TypeArguments="sd1:DataTable" ExpressionText="emailDetail" />
-                    </InOutArgument>
-                    <InOutArgument x:TypeArguments="x:String" x:Key="emailDate">
-                      <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="emailDate" />
-                    </InOutArgument>
-                    <InOutArgument x:TypeArguments="x:String" x:Key="emailStatus">
-                      <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="emailStatus" />
-                    </InOutArgument>
+                    <InOutArgument x:TypeArguments="sd1:DataTable" x:Key="emailDetail">[emailDetail]</InOutArgument>
+                    <InOutArgument x:TypeArguments="x:String" x:Key="emailDate">[emailDate]</InOutArgument>
+                    <InOutArgument x:TypeArguments="x:String" x:Key="emailStatus">[emailStatus]</InOutArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
