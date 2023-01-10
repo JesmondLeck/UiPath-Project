@@ -8,6 +8,7 @@
     "UiPath.Excel.Activities": "[2.11.4]",
     "UiPath.IntelligentOCR.Activities": "[6.6.0]",
     "UiPath.Mail.Activities": "[1.18.2]",
+    "UiPath.PDF.Activities": "[3.11.0]",
     "UiPath.System.Activities": "[21.10.5]",
     "UiPath.UIAutomation.Activities": "[21.10.6]",
     "UiPathTeam.InteractiveFormLauncher.Activities": "[0.0.7291.27657]",

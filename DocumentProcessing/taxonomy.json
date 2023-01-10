@@ -2,21 +2,21 @@
   "DataContractVersion": "1.1",
   "DocumentTypes": [
     {
-      "DocumentTypeId": "NoGroup.NoCategory.RoboproInvoices",
+      "DocumentTypeId": "NoGroup.NoCategory.M3ProjectsInvoices",
       "Group": "",
       "Category": "",
-      "Name": "Robopro Invoices",
+      "Name": "M3 Projects Invoices",
       "OptionalUniqueIdentifier": "",
       "TypeField": {
-        "FieldId": "NoGroup.NoCategory.RoboproInvoices.DocumentType",
+        "FieldId": "NoGroup.NoCategory.M3ProjectsInvoices.DocumentType",
         "FieldName": "Document Type"
       },
       "Fields": [
         {
-          "FieldId": "NoGroup.NoCategory.RoboproInvoices.InvoiceNumber",
-          "FieldName": "Invoice Number",
+          "FieldId": "NoGroup.NoCategory.M3ProjectsInvoices.CompanyName",
+          "FieldName": "Company Name",
           "IsMultiValue": false,
-          "Type": "Number",
+          "Type": "Name",
           "DeriveFieldsFormat": "",
           "Components": [],
           "SetValues": [],
@@ -27,15 +27,16 @@
             },
             {
               "Key": "Hotkey",
-              "Value": "v"
+              "Value": "c"
             }
-          ]
+          ],
+          "RuleSet": null
         },
         {
-          "FieldId": "NoGroup.NoCategory.RoboproInvoices.Date",
-          "FieldName": "Date",
+          "FieldId": "NoGroup.NoCategory.M3ProjectsInvoices.CompanyAddress",
+          "FieldName": "Company Address",
           "IsMultiValue": false,
-          "Type": "Date",
+          "Type": "Address",
           "DeriveFieldsFormat": "",
           "Components": [],
           "SetValues": [],
@@ -46,13 +47,14 @@
             },
             {
               "Key": "Hotkey",
-              "Value": "a"
+              "Value": "m"
             }
-          ]
+          ],
+          "RuleSet": null
         },
         {
-          "FieldId": "NoGroup.NoCategory.RoboproInvoices.CustomerName",
-          "FieldName": "Customer Name",
+          "FieldId": "NoGroup.NoCategory.M3ProjectsInvoices.InvoiceID",
+          "FieldName": "Invoice ID",
           "IsMultiValue": false,
           "Type": "Text",
           "DeriveFieldsFormat": "",
@@ -65,15 +67,16 @@
             },
             {
               "Key": "Hotkey",
-              "Value": "c"
+              "Value": "v"
             }
-          ]
+          ],
+          "RuleSet": null
         },
         {
-          "FieldId": "NoGroup.NoCategory.RoboproInvoices.Total",
-          "FieldName": "Total",
+          "FieldId": "NoGroup.NoCategory.M3ProjectsInvoices.BalanceDue",
+          "FieldName": "Balance Due",
           "IsMultiValue": false,
-          "Type": "Number",
+          "Type": "Text",
           "DeriveFieldsFormat": "",
           "Components": [],
           "SetValues": [],
@@ -84,49 +87,413 @@
             },
             {
               "Key": "Hotkey",
-              "Value": "l"
+              "Value": "a"
             }
-          ]
+          ],
+          "RuleSet": null
         },
         {
-          "FieldId": "NoGroup.NoCategory.RoboproInvoices.Items",
+          "FieldId": "NoGroup.NoCategory.M3ProjectsInvoices.InvoiceDate",
+          "FieldName": "Invoice Date",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#d2d550"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.M3ProjectsInvoices.Terms",
+          "FieldName": "Terms",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#464ed2"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.M3ProjectsInvoices.DueDate",
+          "FieldName": "Due Date",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#3ddb77"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "q"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.M3ProjectsInvoices.Items",
           "FieldName": "Items",
           "IsMultiValue": false,
           "Type": "Table",
           "DeriveFieldsFormat": "",
           "Components": [
             {
-              "FieldId": "NoGroup.NoCategory.RoboproInvoices.Items.Description",
+              "FieldId": "NoGroup.NoCategory.M3ProjectsInvoices.Items.Description",
               "FieldName": "Description",
               "IsMultiValue": false,
               "Type": "Text",
               "DeriveFieldsFormat": "",
               "Components": [],
               "SetValues": [],
-              "Metadata": []
+              "Metadata": [],
+              "RuleSet": null
             },
             {
-              "FieldId": "NoGroup.NoCategory.RoboproInvoices.Items.Qty(Hours)",
-              "FieldName": "Qty (Hours)",
+              "FieldId": "NoGroup.NoCategory.M3ProjectsInvoices.Items.Quantity",
+              "FieldName": "Quantity",
               "IsMultiValue": false,
               "Type": "Number",
               "DeriveFieldsFormat": "",
               "Components": [],
               "SetValues": [],
-              "Metadata": []
+              "Metadata": [],
+              "RuleSet": null
+            },
+            {
+              "FieldId": "NoGroup.NoCategory.M3ProjectsInvoices.Items.Rate",
+              "FieldName": "Rate",
+              "IsMultiValue": false,
+              "Type": "Number",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": [],
+              "Metadata": [],
+              "RuleSet": null
+            },
+            {
+              "FieldId": "NoGroup.NoCategory.M3ProjectsInvoices.Items.Amount",
+              "FieldName": "Amount",
+              "IsMultiValue": false,
+              "Type": "Number",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": [],
+              "Metadata": [],
+              "RuleSet": null
             }
           ],
           "SetValues": [],
           "Metadata": [
             {
               "Key": "Color",
-              "Value": "#ccc542"
+              "Value": "#f544f6"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "w"
+            }
+          ],
+          "RuleSet": null
+        }
+      ]
+    },
+    {
+      "DocumentTypeId": "NoGroup.NoCategory.TP500Invoices",
+      "Group": "",
+      "Category": "",
+      "Name": "TP 500 Invoices",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "NoGroup.NoCategory.TP500Invoices.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "NoGroup.NoCategory.TP500Invoices.CustomerName",
+          "FieldName": "Customer Name",
+          "IsMultiValue": false,
+          "Type": "Name",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#661595"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.TP500Invoices.VendorID",
+          "FieldName": "Vendor ID",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#eb46cf"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.TP500Invoices.CompanyName",
+          "FieldName": "Company Name",
+          "IsMultiValue": false,
+          "Type": "Name",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#5fcfb9"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "m"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.TP500Invoices.CompanyAddress",
+          "FieldName": "Company Address",
+          "IsMultiValue": false,
+          "Type": "Address",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#dba06d"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.TP500Invoices.CompanyPhone",
+          "FieldName": "Company Phone",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#b893a1"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "y"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.TP500Invoices.InvoiceNo",
+          "FieldName": "Invoice No",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#ce5dd9"
             },
             {
               "Key": "Hotkey",
               "Value": "e"
             }
-          ]
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.TP500Invoices.InvoiceDate",
+          "FieldName": "Invoice Date",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#d115c0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "q"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.TP500Invoices.CreditTerms",
+          "FieldName": "Credit Terms",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#bc8477"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.TP500Invoices.TotalBeforeGST",
+          "FieldName": "Total Before GST",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#b1385f"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.TP500Invoices.TotalAfterGST",
+          "FieldName": "Total After GST",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#99ac97"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "g"
+            }
+          ],
+          "RuleSet": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.TP500Invoices.Items",
+          "FieldName": "Items",
+          "IsMultiValue": false,
+          "Type": "Table",
+          "DeriveFieldsFormat": "",
+          "Components": [
+            {
+              "FieldId": "NoGroup.NoCategory.TP500Invoices.Items.Description",
+              "FieldName": "Description",
+              "IsMultiValue": false,
+              "Type": "Text",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": [],
+              "Metadata": [],
+              "RuleSet": null
+            },
+            {
+              "FieldId": "NoGroup.NoCategory.TP500Invoices.Items.Quantity",
+              "FieldName": "Quantity",
+              "IsMultiValue": false,
+              "Type": "Number",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": [],
+              "Metadata": [],
+              "RuleSet": null
+            },
+            {
+              "FieldId": "NoGroup.NoCategory.TP500Invoices.Items.UnitPrice",
+              "FieldName": "Unit Price",
+              "IsMultiValue": false,
+              "Type": "Number",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": [],
+              "Metadata": [],
+              "RuleSet": null
+            },
+            {
+              "FieldId": "NoGroup.NoCategory.TP500Invoices.Items.GrossAmountAfterGST",
+              "FieldName": "Gross Amount After GST",
+              "IsMultiValue": false,
+              "Type": "Number",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": [],
+              "Metadata": [],
+              "RuleSet": null
+            }
+          ],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#f732af"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "w"
+            }
+          ],
+          "RuleSet": null
         }
       ]
     }
